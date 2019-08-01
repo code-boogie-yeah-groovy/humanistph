@@ -4,96 +4,105 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <title>Philippine Humanist Project</title>
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
+            nav.navbar {
+                background-color:#9495db;
             }
-
-            .full-height {
-                height: 100vh;
+            main>header {
+                padding: 3rem;
+                background-color: rgba(235,192,238, 0.3);
             }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
+            article {
+                padding: 1rem;
             }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
+            footer {
+                background-color: #abb4ae;
             }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a href="#" class="navbar-brand">The Philippine Humanist Project</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">What is Humanism?</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                The Org
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Programs</a>
+                                <a class="dropdown-item" href="#">Meet the Team</a>
+                                <a class="dropdown-item" href="#">Be Involved</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News and Features</a>
+                        </li>
+                    </ul>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            </nav>
+        </header>
+        <main>
+            <header>
+                <center>
+                    <h1>The Philippine Humanist Project</h1>
+                    <span>Holistic Humanism for the modern Filipino</span>
+                </center>
+            </header>
+            <div id="app">
+                <article>
+                    <h2>Welcome!</h2>
+                    <section>
+                        It is an exciting time for the Philippines. Waking up from centuries of religious conditioning, the new Pinoy and Pinay are more secular and more socially progressive while respectful of the country's past and fully aware of the power of the old memes.  It is in this context that we welcome you to this site.  This is the most comprehensive effort to nurture a secular humanist culture in the country, build a safe haven for young secular Pinoys, and provide the platform for anybody to effect a positive change to Philippine society.
+                        <br><br>
+                        If you are...
+                        <ul>
+                            <li>
+                                an atheist, an agnostic, a searcher or a secular Filipino who wants to meet and work with like-minded individuals;
+                            </li>
+                            <li>
+                                a theist who want to engage in a small-group and respectful discussion; or,
+                            </li>
+                            <li>
+                                somebody who wants to support in the strengthening of a socially progressive and rights-based culture in the country while helping others in meaningful humanitarian and humanist endeavors;
+                            </li>
+                        </ul>
+                        Then, you are in the right place.  And we welcome to this great social adventure.
+                        <br>
+                        Check out how to be involved, either as a member, a volunteer, or a donor.
+                    </section>
+                </article>
             </div>
-        </div>
+        </main>
+        <footer>
+            <center>
+                &copy; 2018 by Philippine Humanists, Inc.
+            </center>
+        </footer>
     </body>
 </html>

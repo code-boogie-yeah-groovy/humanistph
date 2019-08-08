@@ -88,6 +88,9 @@
                                 <a class="dropdown-item" href="#">Programs</a>
                                 <a class="dropdown-item" href="#">Meet the Team</a>
                                 <a class="dropdown-item" href="#">Be Involved</a>
+                                @guest
+                                    <a class="dropdown-item" href="{{ route('login') }}">Member Login</a>
+                                @endguest
                             </div>
                         </li>
                         <li class="nav-item">

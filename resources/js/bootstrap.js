@@ -11,6 +11,8 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('perfect-scrollbar');
+    require('@coreui/coreui');
 } catch (e) {}
 
 /**
